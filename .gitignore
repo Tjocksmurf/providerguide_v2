@@ -4,7 +4,11 @@
 /web/modules/contrib/
 /web/themes/contrib/
 /web/profiles/contrib/
-/web/libraries/
+/web/libraries/*
+# Front-end libraries committed to the repo (the Drupal modules require them and
+# they have no Composer package wired up): Chosen and Select2.
+!/web/libraries/chosen
+!/web/libraries/select2
 /drush/Commands/contrib/
 
 # === Site files & local/secret settings ===

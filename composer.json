@@ -50,6 +50,11 @@
   "conflict": {
     "drupal/drupal": "*"
   },
+  "scripts": {
+    "d11-compat": "@php scripts/d11-compat.php",
+    "post-install-cmd": ["@d11-compat"],
+    "post-update-cmd": ["@d11-compat"]
+  },
   "minimum-stability": "dev",
   "prefer-stable": true,
   "config": {
