@@ -37,6 +37,19 @@ After importing the database, sync the tracked configuration into it:
 ddev drush config:import -y && ddev drush cr
 ```
 
+## Keeping local in sync with production
+
+Pull the production database and uploaded files into your local DDEV site:
+
+```bash
+./scripts/sync-local-from-prod.sh
+```
+
+This dumps the prod database over SSH (`cbb`), imports it locally, syncs
+`sites/default/files`, and rebuilds caches. It overwrites local data, so it is a
+one-way prod → local refresh. (DB credentials are read on the server, never
+stored in the script.)
+
 ## Configuration management
 
 Site configuration is version-controlled in `config/sync/` (outside the docroot;
