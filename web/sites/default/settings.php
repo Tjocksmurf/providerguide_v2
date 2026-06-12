@@ -260,6 +260,10 @@ $databases = [];
  */
 # $settings['config_sync_directory'] = '/directory/outside/webroot';
 
+# Configuration sync directory, version-controlled in the repo (outside the
+# docroot). Same across all environments; export/import via Drush.
+$settings['config_sync_directory'] = '../config/sync';
+
 /**
  * Settings:
  *
