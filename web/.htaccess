@@ -2,6 +2,10 @@
 # Apache/PHP/Drupal settings:
 #
 
+# Select PHP 8.3 on this host (LiteSpeed/CloudLinux). Required by Drupal 11.
+# Ignored by environments that don't read .htaccess (e.g. DDEV/nginx).
+AddHandler application/x-httpd-php83 .php
+
 # Protect files and directories from prying eyes.
 <FilesMatch "\.(engine|inc|install|make|module|profile|po|sh|.*sql|theme|twig|tpl(\.php)?|xtmpl|yml)(~|\.sw[op]|\.bak|\.orig|\.save)?$|^(\.(?!well-known).*|Entries.*|Repository|Root|Tag|Template|composer\.(json|lock)|web\.config|yarn\.lock|package\.json)$|^#.*#$|\.php(~|\.sw[op]|\.bak|\.orig|\.save)$">
   <IfModule mod_authz_core.c>
