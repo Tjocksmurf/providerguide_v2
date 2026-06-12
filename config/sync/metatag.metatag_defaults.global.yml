@@ -1,0 +1,16 @@
+uuid: ce57c9d2-a369-4df3-85fa-2bafdef27677
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: sL588ui1E_8-2c_UupwyYxcqX2OVyMFp3HTLbbFqvPc
+id: global
+label: Global
+tags:
+  canonical_url: '[current-page:url]'
+  title: '[current-page:title] | [site:name]'
+  geo_placename: Australia
+  description: '[current-page:title] | NDIS Provider search | Provider Guide'
+  keywords: 'NDIS Providers '
+  twitter_cards_type: summary
+  twitter_cards_description: 'Provider Guide offers an easy to use search function to find an NDIS Provider in your area. '

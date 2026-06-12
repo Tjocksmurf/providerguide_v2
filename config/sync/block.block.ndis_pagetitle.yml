@@ -1,0 +1,31 @@
+uuid: d2fb5e38-3eef-4d1e-ad96-bd4aac8cc712
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_visibility_conditions
+  theme:
+    - ndis
+_core:
+  default_config_hash: VGUdlM6HktSItUoX0ePHJp9U1LE7XMe15_5_bCu3h0E
+id: ndis_pagetitle
+theme: ndis
+region: content_header
+weight: -4
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility:
+  not_node_type:
+    id: not_node_type
+    bundles:
+      provider: provider
+    negate: null
+  not_taxonomy_vocabulary:
+    id: not_taxonomy_vocabulary
+    bundles: {  }
+    negate: null

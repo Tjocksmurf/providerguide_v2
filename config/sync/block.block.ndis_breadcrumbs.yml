@@ -1,0 +1,27 @@
+uuid: 4bc0a0b0-b458-4ddf-8717-275909056d0e
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - ndis
+_core:
+  default_config_hash: K3M1ging5WeaBnO4UDwmIKJe-YeLXTSIB09LC_LY1EA
+id: ndis_breadcrumbs
+theme: ndis
+region: content_header
+weight: -3
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    context_mapping: {  }
+    pages: '<front>'

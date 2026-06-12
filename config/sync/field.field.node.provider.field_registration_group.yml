@@ -1,0 +1,29 @@
+uuid: 6731777a-eb1f-4f62-b1e4-d217c58ea712
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_registration_group
+    - node.type.provider
+    - taxonomy.vocabulary.registration_group
+id: node.provider.field_registration_group
+field_name: field_registration_group
+entity_type: node
+bundle: provider
+label: 'Provider services'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      registration_group: registration_group
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,22 @@
+uuid: 747d94b1-e08f-4342-bfdc-1db2c6d90eb9
+langcode: en
+status: true
+dependencies:
+  theme:
+    - electra
+_core:
+  default_config_hash: Eh1Xqa2S9XT-6B_7C4B7RVV13U9A9uMTKZGzwwG1X-k
+id: tabs
+theme: electra
+region: content_header
+weight: 0
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

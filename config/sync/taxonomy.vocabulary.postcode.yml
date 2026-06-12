@@ -1,0 +1,9 @@
+uuid: 420d520a-0d0c-4cab-9195-3d58a5c28b8d
+langcode: en
+status: true
+dependencies: {  }
+name: Postcode
+vid: postcode
+description: null
+weight: 0
+new_revision: false

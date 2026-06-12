@@ -1,0 +1,19 @@
+uuid: 4fb52e07-3a4c-4cd2-8e61-a3eb5b13573e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_address
+    - node.type.provider
+id: node.provider.field_address
+field_name: field_address
+entity_type: node
+bundle: provider
+label: Address
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,29 @@
+_core:
+  default_config_hash: lBbTE00IIJTL2U1GzHpfbSNsUHrKbNvdJO-9PvCR8MA
+favicon:
+  use_default: true
+features:
+  comment_user_picture: false
+  comment_user_verification: false
+  favicon: true
+  node_user_picture: false
+logo:
+  path: ''
+  use_default: false
+display_sample_blocks: 0
+user_page_intro: 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Browse our site and see for yourself why you need Electra.'
+header_color: '#212121'
+header_link_style: navbar-dark
+header_type: overlay
+header_type_sticky: 1
+header_type_sticky_resize: 1
+page_header_style: default
+display_social_round_icons: 0
+copyright_text: '© Copyright @year. All Rights Reserved'
+display_theme_credits: 0
+header_position: header-top
+social_facebook: ''
+social_googleplus: ''
+social_linkedin: ''
+social_twitter: ''
+social_youtube: ''

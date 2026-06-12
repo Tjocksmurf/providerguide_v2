@@ -1,0 +1,20 @@
+uuid: 9d95ba3e-3e77-435c-b483-29fa32c82b08
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_registration_group
+field_name: field_registration_group
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

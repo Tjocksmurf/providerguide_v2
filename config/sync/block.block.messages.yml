@@ -1,0 +1,22 @@
+uuid: 3575dfcf-e9f5-4c24-8569-644ab0848c0c
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - electra
+_core:
+  default_config_hash: iZKtgyDdbuAcx7BKmdq-YT1KaeNGkd0_v7MDiUS_j9s
+id: messages
+theme: electra
+region: content_top
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: Messages
+  label_display: '0'
+  provider: system
+visibility: {  }

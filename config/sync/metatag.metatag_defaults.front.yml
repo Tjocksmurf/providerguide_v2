@@ -1,0 +1,11 @@
+uuid: 723f6277-91fc-41b0-b220-00bbc70ea6a4
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 1noCXlegCr5HFehQRF1ViXy1jhU1jZ_sNN99a8Sj5jo
+id: front
+label: 'Front page'
+tags:
+  shortlink: '[site:url]'
+  canonical_url: 'https://providerguide.com.au'

@@ -1,0 +1,9 @@
+uuid: 9b797cb8-9a30-4422-9164-b73e7c684e05
+langcode: en
+status: true
+dependencies: {  }
+name: 'Registration Group'
+vid: registration_group
+description: null
+weight: 0
+new_revision: false

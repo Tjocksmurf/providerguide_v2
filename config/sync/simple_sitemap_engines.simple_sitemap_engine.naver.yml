@@ -1,0 +1,9 @@
+uuid: 27909f1f-0e25-44f1-8f40-fe0e3f819e0b
+langcode: en
+status: true
+dependencies: {  }
+id: naver
+label: Naver
+url: null
+index_now_url: 'https://searchadvisor.naver.com/indexnow?url=[url]&key=[key]'
+sitemap_variants: null

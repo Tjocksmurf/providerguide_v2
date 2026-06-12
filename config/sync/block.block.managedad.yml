@@ -1,0 +1,37 @@
+uuid: 62da4d3b-d3ef-4f8a-8288-772ce3c20efa
+langcode: en
+status: true
+dependencies:
+  module:
+    - adsense
+    - block_visibility_conditions
+  theme:
+    - ndis
+id: managedad
+theme: ndis
+region: content_bottom
+weight: -5
+provider: null
+plugin: adsense_managed_ad_block
+settings:
+  id: adsense_managed_ad_block
+  label: Featured
+  label_display: visible
+  provider: adsense
+  ad_slot: '7236665763'
+  ad_format: responsive
+  ad_width: null
+  ad_height: null
+  ad_shape:
+    auto: auto
+  ad_align: center
+  ad_layout_key: ''
+visibility:
+  not_taxonomy_vocabulary:
+    id: not_taxonomy_vocabulary
+    bundles: {  }
+    negate: null
+  not_node_type:
+    id: not_node_type
+    bundles: {  }
+    negate: null

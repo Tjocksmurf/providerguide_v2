@@ -1,0 +1,22 @@
+uuid: a63fdf31-3fef-4fa1-94e3-1615231c96b4
+langcode: en
+status: true
+dependencies:
+  theme:
+    - ndis
+_core:
+  default_config_hash: Eh1Xqa2S9XT-6B_7C4B7RVV13U9A9uMTKZGzwwG1X-k
+id: ndis_tabs
+theme: ndis
+region: content_header
+weight: 0
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

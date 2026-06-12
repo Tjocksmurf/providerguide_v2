@@ -1,0 +1,23 @@
+uuid: 94d967ee-381b-487c-a0cf-e3099a1c5c22
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:electra_parallax:4b99e9d9-e0ee-4acc-8828-58e57a4b8c08'
+  module:
+    - block_content
+  theme:
+    - electra
+id: front
+theme: electra
+region: content_top_fluid
+weight: 0
+provider: null
+plugin: 'block_content:4b99e9d9-e0ee-4acc-8828-58e57a4b8c08'
+settings:
+  id: 'block_content:4b99e9d9-e0ee-4acc-8828-58e57a4b8c08'
+  label: Front
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility: {  }

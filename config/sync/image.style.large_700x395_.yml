@@ -1,0 +1,17 @@
+uuid: 5d397019-63d9-49d8-bd8c-c0b976d02362
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: jdrwcuavB6IKF-juxmrOgbi9mQ8HDjC2kv-o-fnrWII
+name: large_700x395_
+label: 'Large (700x395)'
+effects:
+  28ad5019-1924-4e4a-b0cd-186a2dc985b1:
+    uuid: 28ad5019-1924-4e4a-b0cd-186a2dc985b1
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 700
+      height: 395
+      anchor: center-center

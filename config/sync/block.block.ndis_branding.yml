@@ -1,0 +1,25 @@
+uuid: dde99a2e-cb6e-4222-9dc9-0e5421338479
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - ndis
+_core:
+  default_config_hash: g3z465PyZBTINwEoyAVP4r_jua-OyIRj0QdoEyRbuKE
+id: ndis_branding
+theme: ndis
+region: header_left
+weight: -6
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: false
+visibility: {  }

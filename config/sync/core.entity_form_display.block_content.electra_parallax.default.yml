@@ -1,0 +1,75 @@
+uuid: 7a968e55-8c2d-4a58-9e34-9d5323adaacf
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.electra_parallax
+    - field.field.block_content.electra_parallax.body
+    - field.field.block_content.electra_parallax.field_electra_color_type
+    - field.field.block_content.electra_parallax.field_electra_parallax_bg_image
+    - field.field.block_content.electra_parallax.field_electra_parallax_bg_type
+    - field.field.block_content.electra_parallax.field_electra_parallax_type
+    - field.field.block_content.electra_parallax.field_extra_class
+    - image.style.thumbnail
+  module:
+    - image
+    - text
+_core:
+  default_config_hash: clKW9hYQtK1jTbWQBou_H0kSJjkIrwAJ_S-WX9dfctg
+id: block_content.electra_parallax.default
+targetEntityType: block_content
+bundle: electra_parallax
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 5
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+  field_electra_color_type:
+    type: options_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_electra_parallax_bg_image:
+    type: image_image
+    weight: 3
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_electra_parallax_bg_type:
+    type: options_select
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_electra_parallax_type:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_extra_class:
+    type: string_textfield
+    weight: 6
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

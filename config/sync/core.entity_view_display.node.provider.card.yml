@@ -1,0 +1,121 @@
+uuid: 01417078-7813-4d59-8f47-5a177b8ee9bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.card
+    - field.field.node.provider.body
+    - field.field.node.provider.field_address
+    - field.field.node.provider.field_city
+    - field.field.node.provider.field_display_title
+    - field.field.node.provider.field_email
+    - field.field.node.provider.field_grade
+    - field.field.node.provider.field_phone
+    - field.field.node.provider.field_postcode
+    - field.field.node.provider.field_provider_image
+    - field.field.node.provider.field_registration_group
+    - field.field.node.provider.field_show_border_around_logo
+    - field.field.node.provider.field_state
+    - field.field.node.provider.field_website
+    - image.style.large
+    - node.type.provider
+  module:
+    - image
+    - link
+    - text
+    - title_field_for_manage_display
+    - user
+id: node.provider.card
+targetEntityType: node
+bundle: provider
+mode: card
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_address:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_display_title:
+    type: title_value_field_formatter
+    label: hidden
+    settings:
+      tag: h2
+      linked: '1'
+      classes: ''
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_email:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_grade:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_phone:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_provider_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: content
+      image_style: large
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_registration_group:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_website:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_city: true
+  field_postcode: true
+  field_show_border_around_logo: true
+  field_state: true

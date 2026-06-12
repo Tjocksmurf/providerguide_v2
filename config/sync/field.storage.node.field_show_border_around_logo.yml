@@ -1,0 +1,18 @@
+uuid: a85dc409-4fcc-4506-9926-5ed1cdb0ccae
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_show_border_around_logo
+field_name: field_show_border_around_logo
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

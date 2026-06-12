@@ -1,0 +1,22 @@
+uuid: 0c6ba516-88ea-41bc-8db6-53eda67e77c7
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - ndis
+_core:
+  default_config_hash: iZKtgyDdbuAcx7BKmdq-YT1KaeNGkd0_v7MDiUS_j9s
+id: ndis_messages
+theme: ndis
+region: content_top
+weight: -4
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: Messages
+  label_display: '0'
+  provider: system
+visibility: {  }

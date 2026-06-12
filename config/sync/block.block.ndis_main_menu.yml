@@ -1,0 +1,27 @@
+uuid: e6fa0718-4cf5-4427-b7aa-1010f4eaee0c
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - ndis
+_core:
+  default_config_hash: m-BB1kcnxKZ_v0j_NAG0Crti_sOvBBsXSJBu1QxzCr4
+id: ndis_main_menu
+theme: ndis
+region: header_left
+weight: -4
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 2
+  expand_all_items: false
+visibility: {  }
