@@ -9,13 +9,11 @@
 {% set gradient_style = content['#block_content'].field_electra_color_type.value %}
 {% set bg_image_url = file_url(content['#block_content'].field_electra_parallax_bg_image.entity.uri.value) %}
 {% set bg_image_type = content['#block_content'].field_electra_parallax_bg_type.value %}
-{% set extra_class = content['#block_content'].field_extra_class.value %}
 
 {%
   set classes = [
     'parallax-block',
     'parallax-' ~ type|clean_class,
-    extra_class|clean_class,
   ]
 %}
 

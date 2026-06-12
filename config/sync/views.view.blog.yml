@@ -75,6 +75,7 @@ display:
         type: mini
         options:
           offset: 0
+          pagination_heading_level: h4
           items_per_page: 10
           total_pages: null
           id: 0
@@ -89,7 +90,6 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
-          pagination_heading_level: h4
       exposed_form:
         type: basic
         options:
@@ -185,8 +185,11 @@ display:
     display_plugin: page
     position: 1
     display_options:
+      title: Articles
+      defaults:
+        title: false
       display_extenders: {  }
-      path: blog
+      path: articles
     cache_metadata:
       max-age: -1
       contexts:

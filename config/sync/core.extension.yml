@@ -55,6 +55,7 @@ module:
   path_alias: 0
   phpass: 0
   rest: 0
+  scheduler: 0
   schema_metatag: 0
   schema_web_site: 0
   search: 0

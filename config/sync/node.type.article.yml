@@ -4,11 +4,17 @@ status: true
 dependencies:
   module:
     - menu_ui
+    - scheduler
 third_party_settings:
   menu_ui:
     available_menus:
       - main
     parent: 'main:'
+  scheduler:
+    fields_display_mode: vertical_tab
+    publish_enable: true
+    publish_touch: false
+    unpublish_enable: true
 _core:
   default_config_hash: AeW1SEDgb1OTQACAWGhzvMknMYAJlcZu0jljfeU3oso
 name: Article

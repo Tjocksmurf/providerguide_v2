@@ -31,6 +31,7 @@
     "drupal/migrate_source_csv": "^3.5",
     "drupal/migrate_tools": "^6.0",
     "drupal/pathauto": "^1.13",
+    "drupal/scheduler": "^2.3",
     "drupal/schema_metatag": "^3.0",
     "drupal/seckit": "^2.0",
     "drupal/select2": "^1.13",
@@ -71,6 +72,9 @@
     "drupal-scaffold": {
       "locations": {
         "web-root": "./web"
+      },
+      "file-mapping": {
+        "[web-root]/.htaccess": false
       }
     },
     "installer-paths": {
