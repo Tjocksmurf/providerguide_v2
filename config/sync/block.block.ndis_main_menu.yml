@@ -1,6 +1,6 @@
 uuid: e6fa0718-4cf5-4427-b7aa-1010f4eaee0c
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - system.menu.main
@@ -12,7 +12,7 @@ _core:
   default_config_hash: m-BB1kcnxKZ_v0j_NAG0Crti_sOvBBsXSJBu1QxzCr4
 id: ndis_main_menu
 theme: ndis
-region: header_left
+region: navigation
 weight: -4
 provider: null
 plugin: 'system_menu_block:main'
