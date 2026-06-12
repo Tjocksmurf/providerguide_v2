@@ -1,0 +1,355 @@
+html {
+  .page-header {
+    height: 9.875rem;
+    background-color: transparent;
+    background: #fff;
+
+    .container {
+      padding-top: 5em;
+    }
+  }
+}
+
+.view-providers {
+  display: flex;
+  flex-wrap: wrap;
+
+  .views-exposed-form {
+    width: 100%;
+    padding-bottom: 20px;
+  }
+
+  .views-row {
+    padding-bottom: 20px;
+  }
+
+  .Page.navigation {
+    width: 100%;
+  }
+}
+
+.page-node-type-provider {
+  article {
+    .field--label {
+      font-weight: bold;
+      padding-right: 6px;
+      min-width: 65px;
+    }
+  }
+}
+
+
+.node-card-full-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.view-providers {
+  .row-eq-height {
+
+  }
+
+  article {
+    border: 1px solid #80808026;
+    padding: 12px;
+    height: 100%;
+
+  }
+
+
+  .provider-card-image-container {
+    display: flex;
+  }
+}
+
+.provider-card {
+
+
+  h2 {
+    font-size: 1.2rem;
+    //min-height: 50px;
+  }
+
+  .field--name-field-registration-group {
+    .field--item {
+      &:before {
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 400;
+        content: "\f007";
+        color: #000;
+        padding-right: 4px;
+      }
+    }
+  }
+
+  .fas {
+    float: left;
+    padding-right: 6px;
+    color: #212529;
+  }
+
+  .field--name-field-display-title {
+    padding-bottom: 6px;
+
+    h2 {
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #212529;
+    }
+  }
+
+  .provider-card-image-container {
+    min-height: 340px;
+  }
+
+  .field--name-field-provider-image {
+    text-align: center;
+    width: 100%;
+
+    img {
+      //border: 1px solid #000;
+      width: 70%;
+    }
+  }
+
+  .field--name-field-website,
+  .field--name-field-email,
+  .field--name-field-address,
+  .field--name-field-phone {
+    //padding-left: 20px;
+    padding-bottom: 6px;
+    font-size: 0.9rem;
+
+    a {
+      font-size: 0.9rem;
+      color: #212529;
+    }
+
+    //&:before {
+    //  display: inline-block;
+    //  font-style: normal;
+    //  font-variant: normal;
+    //  text-rendering: auto;
+    //  -webkit-font-smoothing: antialiased;
+    //  font-family: 'Font Awesome 5 Free';
+    //  font-weight: 400;
+    //  content: "\f1ea";
+    //  color: #000;
+    //  padding-right: 4px;
+    //}
+  }
+}
+
+.social-icons.brand-bg-icons.icon-sm {
+  display: none;
+}
+
+.path-frontpage {
+  .field--name-body.field--type-text-with-summary {
+    h2 {
+      padding-bottom: 50px;
+    }
+
+    .col-sm-6.col-md-3 {
+      a {
+        text-align: center;
+
+        img {
+          width: 50%
+        }
+      }
+
+    }
+  }
+
+  //.region-content-top-fluid {
+  //  .parallax-inner.d-flex.d-height.image {
+  //    background: linear-gradient(
+  //        0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(/sites/default/files/2021-02/providerguide.jpg) !important;
+  //    background-attachment: fixed;
+  //    background-repeat: no-repeat;
+  //    background-position: center center;
+  //    background-size: cover;
+  //  }
+  //}
+
+}
+
+h1.hero-h1,
+h2.hero-h2 {
+  padding-bottom: 20px;
+
+  span {
+    font-weight: 600 !important;
+    font-size: 4rem !important;;
+    color: #fff;
+  }
+}
+
+h3.hero-h3 {
+  font-weight: 200 !important;
+  color: #fff;
+}
+
+
+.nav-item {
+  a {
+    color: #000;
+  }
+}
+
+.navbar-dark.header-fixed.header-resize {
+  .navbar-nav {
+    .nav-item {
+      a.nav-link {
+        color: rgba(255, 255, 255, 0.75);
+      }
+    }
+  }
+}
+
+.navbar-dark {
+  .navbar-nav {
+    .nav-item {
+      a.nav-link {
+        color: #000;
+      }
+    }
+  }
+}
+
+.path-frontpage {
+  .navbar-dark {
+    .navbar-nav {
+      .nav-item {
+        a.nav-link {
+          color: rgba(255, 255, 255, 0.75);
+        }
+      }
+    }
+  }
+}
+
+
+@media (min-width: 991.98px) {
+  .page-node-type-provider {
+    .content-wrapper {
+      padding-top: 180px;
+    }
+  }
+}
+
+.Free {
+  .show-provider-details {
+    min-height: 30px;
+
+    &:before {
+      content: 'Click here to reveal contact details.';
+      display: block;
+      display: inline-block;
+      font-weight: 400;
+      //color: #212529;
+      text-align: center;
+      vertical-align: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      //background-color: transparent;
+      border: 1px solid transparent;
+      padding: 0.375rem 0.75rem;
+      font-size: 1rem;
+      line-height: 1.5;
+      //border-radius: 0.25rem;
+      -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+      transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+      transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+      padding: 0.25rem 0.5rem;
+      font-size: 0.875rem;
+      line-height: 1.5;
+      border-radius: 0.2rem;
+      text-decoration: underline;
+      //color: #fff;
+      //background-color: #007bff;
+      //border-color: #007bff;
+      -webkit-box-shadow: inset 0 1px 0 rgb(255 255 255 / 15%), 0 1px 1px rgb(0 0 0 / 8%);
+      box-shadow: inset 0 1px 0 rgb(255 255 255 / 15%), 0 1px 1px rgb(0 0 0 / 8%);
+      top: 100px;
+      left: 200px;
+      z-index: 255;
+      position: absolute;
+      font-size: 0.975rem;
+    }
+
+    > div {
+      //display: none;
+      //transition: display 1s;
+      &:after {
+        position: absolute;
+        width: 100px;
+        left: 100px;
+        display: block;
+        content: ' &nbsp;';
+        text-indent: -999px;
+        background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+      }
+
+      &:before {
+        background-color: #fff;
+        position: absolute;
+        width: 300px;
+        left: 200px;
+        display: block;
+        content: ' &nbsp;';
+        text-indent: -999px;
+      }
+    }
+
+    &.show-it {
+      &:before {
+        content: '';
+        display: none;
+      }
+
+      &:after {
+        content: '';
+        display: none;
+      }
+
+      > div {
+        display: block;
+        transition: display 1s;
+
+        &:before {
+          content: '';
+          display: none;
+        }
+
+        &:after {
+          content: '';
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.block-adsense{
+  h2{
+    display: none;
+  }
+}
+
+
+
+
+
+

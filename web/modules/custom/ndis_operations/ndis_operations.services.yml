@@ -1,0 +1,6 @@
+services:
+  ndis_operations.event_subscriber:
+    class: Drupal\ndis_operations\EventSubscriber\NdisOperationsSubscriber
+    arguments: ['@messenger']
+    tags:
+      - { name: event_subscriber }

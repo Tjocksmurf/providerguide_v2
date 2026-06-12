@@ -1,0 +1,23 @@
+name: NDIS
+type: theme
+description: This is the NDIS theme
+core_version_requirement: ^8 || ^9 || ^10 || ^11
+# Defines the base theme
+base theme: electra
+# Defines libraries group in which we can add css/js.
+libraries:
+  - ndis/global-styling
+
+regions:
+  header_left: 'Header Left'
+  navigation: 'Main Navigation'
+  header_right: 'Header Right'
+  content_header: 'Page Header'
+  content_top_fluid: 'Page top Full Width'
+  content_top: 'Content top'
+  content: 'Content' #required!
+  content_bottom: 'Content bottom'
+  content_bottom_fluid: 'Page bottom Full Width'
+  sidebar_right: 'Right Sidebar'
+  footer_top: 'Footer Top'
+  footer_middle: 'Footer Middle'

@@ -1,0 +1,23 @@
+ndis_operations.example:
+  path: '/ndis-operations/example'
+  defaults:
+    _title: 'Example'
+    _controller: '\Drupal\ndis_operations\Controller\NdisOperationsController::build'
+  requirements:
+    _permission: 'access content'
+
+ndis_operations.resave:
+  path: '/ndis-operations/resave'
+  defaults:
+    _title: 'Resave'
+    _controller: '\Drupal\ndis_operations\Controller\NdisOperationsController::resave'
+  requirements:
+    _permission: 'access content'
+
+ndis_operations.settings_form:
+  path: '/admin/config/system/ndis-operations'
+  defaults:
+    _title: 'ndis operations settings'
+    _form: 'Drupal\ndis_operations\Form\SettingsForm'
+  requirements:
+    _permission: 'administer ndis_operations configuration'

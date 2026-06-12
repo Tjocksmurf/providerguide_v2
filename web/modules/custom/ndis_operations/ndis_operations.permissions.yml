@@ -1,0 +1,4 @@
+administer ndis_operations configuration:
+  title: 'Administer ndis_operations configuration'
+  description: 'Optional description.'
+  restrict access: true

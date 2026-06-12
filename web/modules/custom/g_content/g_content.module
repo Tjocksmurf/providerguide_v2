@@ -1,0 +1,80 @@
+<?php
+use Drupal\Core\Site\Settings;
+use Drupal\migrate\Plugin\MigrationInterface;
+use Drupal\migrate\Plugin\MigrateSourceInterface;
+use Drupal\migrate\Row;
+use Drupal\migrate\MigrateSkipRowException;
+use \Drupal\node\Entity\Node;
+use Drupal\taxonomy\Entity\Term;
+
+function g_content_migration_plugins_alter(array &$migrations) {
+
+  foreach ($migrations as $id => $migration) {
+
+    if ($migration['id'] == 'sync_page') {
+      $pages = Settings::get('gcontent_pages');
+      $migrations[$id]['source']['urls'] = $pages;
+    }
+    if ($migration['id'] == 'sync_pages') {
+      $pages = Settings::get('gcontent_pages');
+      $migrations[$id]['source']['urls'] = $pages;
+    }
+    if ($migration['id'] == 'sync_redirects') {
+      $redirects = Settings::get('gcontent_redirects');
+      $migrations[$id]['source']['urls'] = $redirects;
+    }
+  }
+}
+
+
+/**
+ * Implements hook_migrate_prepare_row().
+ *
+ */
+function g_content_migrate_prepare_row(Row $row, MigrateSourceInterface $source, MigrationInterface $migration) {
+  if ($migration->id() == 'sync_page' || $migration->id() == 'sync_csv') {
+    $title = $row->getSourceProperty('title');
+    $registrationgroup = $row->getSourceProperty('registrationgroup');
+    $query = \Drupal::database()->select('node_field_data', 'n')
+      ->fields('n', ['nid'])
+      ->condition('n.type', 'provider')
+      ->condition('n.title', $title);
+    $nid = $query->execute()->fetchField();
+    if (!empty($nid)) {
+      $tid = _get_tid_from_term_name($registrationgroup, 'registration_group', $new = TRUE);
+      if (!empty($tid)) {
+        $node = Node::load($nid);
+        $node->field_registration_group[] = ['target_id' => $tid];
+        $node->save();
+      }
+      throw new MigrateSkipRowException('', TRUE);
+    }
+  }
+}
+
+/**
+ * Return the term id for a given term name.
+ */
+function _get_tid_from_term_name($term_name, $vocabulary, $new = FALSE) {
+  $tid = NULL;
+  $term_name = trim($term_name);
+  if (!empty($term_name)) {
+    $taxonomyStorage = \Drupal::entityTypeManager()->getStorage('taxonomy_term');
+    $properties['name'] = $term_name;
+    $properties['vid'] = $vocabulary;
+    $terms = $taxonomyStorage->loadByProperties($properties);
+    $term = reset($terms);
+    if ($term) {
+      $tid = $term->id();
+    }
+  }
+  if (empty($tid) && ($new) && !empty($term_name)) {
+    $term = Term::create([
+      'name' => $term_name,
+      'vid' => $vocabulary,
+    ]);
+    $term->save();
+    $tid = $term->id();
+  }
+  return $tid;
+}

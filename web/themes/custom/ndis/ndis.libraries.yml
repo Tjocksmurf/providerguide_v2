@@ -1,0 +1,9 @@
+global-styling:
+  css:
+    theme:
+      css/styles.css: {}
+  js:
+    js/script.js: {preprocess: false}
+  dependencies:
+    - core/jquery
+    - core/drupal

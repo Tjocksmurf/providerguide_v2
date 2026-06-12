@@ -1,0 +1,7 @@
+migrate_google_sheets.settings:
+  path: 'admin/config/services/google_sheets'
+  defaults:
+    _title: 'Migrate Google Sheets'
+    _form: 'Drupal\migrate_google_sheets\Form\SettingsForm'
+  requirements:
+    _permission: 'administer site configuration'

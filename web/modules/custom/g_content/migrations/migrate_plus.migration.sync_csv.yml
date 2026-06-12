@@ -1,0 +1,76 @@
+id: sync_csv
+label: Get pages from with Google Spreadsheet
+migration_group: Google_Sheet_Group
+source:
+  plugin: csv
+  path: all.csv
+  ids: [id]
+process:
+  type:
+    plugin: default_value
+    default_value: provider
+  title: title
+  uid:
+    plugin: default_value
+    default_value: 1
+  field_address: address
+  field_email: email
+  field_phone: phone
+  field_website/uri:
+    plugin: addhttp
+    source: website
+  field_website/title:
+    plugin: default_value
+    default_value: ''
+  field_registration_group:
+    plugin: entity_generate
+    source: registrationgroup
+    entity_type: taxonomy_term
+    bundle_key: vid
+    bundle: registration_group
+    value_key: name
+  field_postcode:
+    - plugin: explode
+      source: address
+      delimiter: ,
+    - plugin: array_pop
+    - plugin: explode
+      delimiter: ' '
+    - plugin: array_pop
+    - plugin: entity_generate
+      entity_type: taxonomy_term
+      bundle: postcode
+      value_key: name
+  field_state:
+    - plugin: explode
+      source: address
+      delimiter: ,
+    - plugin: array_pop
+    - plugin: explode
+      delimiter: ' '
+    - plugin: extract
+      index:
+        - 1
+    - plugin: entity_generate
+      entity_type: taxonomy_term
+      bundle: state
+      value_key: name
+  field_city:
+    - plugin: explode
+      source: address
+      delimiter: ,
+#    - plugin: array_pop
+#    - plugin: trim
+    - plugin: explode
+      delimiter: ' '
+    - plugin: extractfromend
+      index:
+        - 1
+    - plugin: entity_generate
+      entity_type: taxonomy_term
+      bundle: city
+      value_key: name
+
+
+destination:
+  plugin: entity:node

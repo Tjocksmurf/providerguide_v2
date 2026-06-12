@@ -1,0 +1,37 @@
+id: sync_redirects
+label: Get redirects from Google Spreadsheet
+migration_group: G Content
+source:
+  plugin: url
+  data_fetcher_plugin: http
+  data_parser_plugin: google_sheets
+  track_changes: true
+  urls: 'Set this in settings.php using: $settings["gcontent_redirects"]'
+  fields:
+    - name: id
+      label: 'Unique identifier'
+      selector: 'id'
+    - name: old_url
+      label: 'Old'
+      selector: 'old'
+    - name: new_url
+      label: 'New'
+      selector: 'new'
+  ids:
+    id:
+      type: integer
+process:
+  redirect_source: old_url
+  redirect_redirect:
+    plugin: pathtouri
+    source: new_url
+#    -
+#      plugin: skip_on_empty
+#      method: process
+#    -
+  status_code:
+    plugin: default_value
+    default_value: 301
+destination:
+  plugin: 'entity:redirect'
+

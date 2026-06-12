@@ -1,0 +1,6 @@
+ndis_operations.settings_form:
+  title: ndis operations
+  description: Configure ndis operations.
+  parent: system.admin_config_system
+  route_name: ndis_operations.settings_form
+  weight: 10

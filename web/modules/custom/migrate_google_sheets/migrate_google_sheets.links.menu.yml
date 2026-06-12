@@ -1,0 +1,5 @@
+migrate_google_sheets.settings:
+  title: Migrate Google Sheets
+  route_name: migrate_google_sheets.settings
+  parent: system.admin_config_services
+  weight: 10

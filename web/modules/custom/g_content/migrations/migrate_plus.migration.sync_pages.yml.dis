@@ -1,0 +1,102 @@
+id: sync_pages
+label: Get pages from with Google Spreadsheet
+migration_group: G Content
+source:
+  plugin: url
+  data_fetcher_plugin: http
+  data_parser_plugin: google_sheets
+  track_changes: true
+  urls: 'Set this in settings.php using: $settings["gcontent_pages"]'
+  fields:
+    - name: id
+      label: 'Unique identifier'
+      selector: 'id'
+    - name: title
+      label: 'Title'
+      selector: 'title'
+    - name: phone
+      label: 'Phone'
+      selector: 'phone'
+    - name: registrationgroup
+      label: 'registrationgroup'
+      selector: 'registrationgroup'
+    - name: postcode
+      label: 'postcode'
+      selector: 'postcode'
+    - name: address
+      label: 'address'
+      selector: 'address'
+    - name: website
+      label: 'website'
+      selector: 'website'
+    - name: email
+      label: 'email'
+      selector: 'email'
+  ids:
+    id:
+      type: integer
+process:
+  type:
+    plugin: default_value
+    default_value: provider
+  title: title
+  field_phone: phone
+  field_email: email
+  field_website: website
+  field_address: address
+  field_registration_group:
+    - plugin: entity_generate
+      source: registrationgroup
+      entity_type: taxonomy_term
+      bundle: field_registration_group
+      value_key: name
+  field_postcode:
+    - plugin: explode
+      source: address
+      delimiter: ,
+    - plugin: array_pop
+    - plugin: explode
+      delimiter: ' '
+    - plugin: array_pop
+    - plugin: entity_generate
+      entity_type: taxonomy_term
+      bundle: postcode
+      value_key: name
+  moderation_state:
+    plugin: default_value
+    default_value: published
+destination:
+  plugin: entity:node
+
+
+
+
+
+
+
+#  field_postcode:
+#    - plugin: explode
+#      source: address
+#      delimiter: ,
+#    - plugin: array_pop
+##    - plugin: explode
+##      delimiter: ' '
+##    - plugin: array_pop
+#    - plugin: entity_generate
+#      entity_type: taxonomy_term
+#      bundle: postcode
+#      value_key: name
+#  field_state:
+#    - plugin: explode
+#      source: address
+#      delimiter: ,
+#    - plugin: array_pop
+#    - plugin: explode
+#      delimiter: ' '
+#    - plugin: extract
+#      index:
+#        - 0
+#    - plugin: entity_generate
+#      entity_type: taxonomy_term
+#      bundle: state
+#      value_key: name
