@@ -353,3 +353,27 @@ h3.hero-h3 {
 
 
 
+
+// Consistent exposed-filter control heights (text input vs Chosen widgets).
+.view-providers .views-exposed-form {
+  .form-control,
+  .chosen-container-single .chosen-single,
+  .chosen-container-multi .chosen-choices {
+    min-height: 38px;
+    box-sizing: border-box;
+  }
+  .chosen-container-multi .chosen-choices {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+  .chosen-container-single .chosen-single {
+    display: flex;
+    align-items: center;
+  }
+  .chosen-container {
+    vertical-align: top;
+  }
+}

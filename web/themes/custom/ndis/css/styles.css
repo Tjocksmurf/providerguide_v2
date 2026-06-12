@@ -226,4 +226,26 @@ h3.hero-h3 {
   display: none;
 }
 
+/* Consistent exposed-filter control heights (text input vs Chosen widgets). */
+.view-providers .views-exposed-form .form-control,
+.view-providers .views-exposed-form .chosen-container-single .chosen-single,
+.view-providers .views-exposed-form .chosen-container-multi .chosen-choices {
+  min-height: 38px;
+  box-sizing: border-box;
+}
+.view-providers .views-exposed-form .chosen-container-multi .chosen-choices {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+.view-providers .views-exposed-form .chosen-container-single .chosen-single {
+  display: flex;
+  align-items: center;
+}
+.view-providers .views-exposed-form .chosen-container {
+  vertical-align: top;
+}
+
 /*# sourceMappingURL=styles.css.map */
