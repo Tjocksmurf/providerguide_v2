@@ -1,6 +1,6 @@
 uuid: c3c838a1-85a1-4f2e-b0e6-08d1b2d6abfa
 langcode: en
-status: false
+status: true
 dependencies:
   content:
     - 'block_content:electra_parallax:4b99e9d9-e0ee-4acc-8828-58e57a4b8c08'
@@ -11,7 +11,7 @@ dependencies:
     - ndis
 id: ndis_front
 theme: ndis
-region: header_left
+region: content_top_fluid
 weight: -6
 provider: null
 plugin: 'block_content:4b99e9d9-e0ee-4acc-8828-58e57a4b8c08'
